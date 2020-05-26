@@ -1,0 +1,45 @@
+<header class="top-header" ng-controller="Shared_controller">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="top-nav  pd-t20 pd-b20">
+                    <div class="logo-block">
+                        <a ng-href="/">
+                            <img src="images/logo.png" class="img-fluid" alt="" title="" />
+                        </a>
+
+                    </div>
+                    <div class="right-nav" ng-if="loginStatus">
+                        <ul class="mr0 pd0 d-flex justify-content-end align-items-center">
+                            <li>
+                                <h5 class="xolor-black mr-r40">Welcome, {{userName}} <br>
+                                    Selected Grade: {{selectedGrade}}</h5>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="color-yellow" ng-click="openModal()">
+                                    Profile
+                                </a>
+                                <span class="color-yellow mr-l10 mr-r10"> | </span>
+                                <a ng-href="#!/labour-list" class=" color-yellow">
+                                    Labour List
+                                </a>
+                                <span class="color-yellow mr-l10 mr-r10"> | </span>
+                                <a href="javascript:void(0)" class="color-yellow" ng-click="Logout_Click()">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="right-nav" ng-if="!loginStatus">
+                        <ul class="mr0 pd0 d-flex justify-content-end align-items-center">
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,29 @@
+<section class="middle-body bg-blue pd-t80 pd-b50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="grade-cir-wrap">
+                    <div class="large-cir">
+                        <h4>
+                            <span>Select</span>
+                            Grade
+
+                        </h4>
+                        <label ng-repeat="std in gradeList" for="{{std.classId}}"
+                            class="class{{std.classId}} class-btn-block">
+                            <input id="{{std.classId}}" name="stand-cir" type="radio" value="{{std.grade}}"
+                                ng-model="$parent.grade1">
+                            <span>{{std.grade}}</span>
+                        </label>
+
+                    </div>
+                    <div class="text-center mr-t70">
+
+                        <span class="dirty-msg">{{formError}}</span> <br>
+                        <button type="button" class="orenge-btn" ng-click="proceedWithGrade()">Proceed</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

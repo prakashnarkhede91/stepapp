@@ -1,0 +1,45 @@
+<section class="middle-body bg-blue">
+    <div id="login-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="login-box text-center">
+                        <img src="images/stepapp-logo.png" class="f-logo" alt="Stepapp" title="Stepapp" />
+                        <form class="mr-t60" name="login">
+                            <h5 class="login-title mr-b30">Sign in to your account to continue</h5>
+                            <div class="form-group mr-b10">
+                                <input type="text" class="form-control circle-input" placeholder="Mobile Number "
+                                    name="mobileNumber" ng-model="mobileNumber" ng-minlength="10" ng-maxlength="10"
+                                    ng-required="true" ng-pattern="/^\+?\d{10}$/">
+                                <span class="dirty-msg"
+                                    ng-show="login.mobileNumber.$touched && (login.mobileNumber.$invalid || login.mobileNumber.$pattern)">
+                                    Valid mobile number is required
+                                </span>
+                            </div>
+                            <div class="form-group mr-b20">
+                                <input type="password" class="form-control circle-input" placeholder="Password"
+                                    ng-model="password" name="password" ng-required="true"
+                                    ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/">
+                                <span class="dirty-msg"
+                                    ng-show="login.password.$touched &&  (login.password.$invalid || login.password.$pattern)">
+                                    Minimum 8 characters
+                                    are required.<br /> Password
+                                    should contain at least one number, one special character, one uppercase letter and
+                                    one
+                                    lowercase
+                                    letter.
+                                </span>
+                            </div>
+                            <p class="signup-link text-right">Don’t have an account? <a href="#">Sign Up</a></p>
+                            <span class="dirty-msg">{{formError}}</span>
+
+                            <button type="button" class="login-btn mr-t40" ng-disabled="MyForm.$invalid"
+                                ng-click="checkLogin()">Sign
+                                In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

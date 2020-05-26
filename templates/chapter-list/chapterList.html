@@ -1,0 +1,43 @@
+<loading></loading>
+<section class="middle-body bg-blue pd-t80 pd-b50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 cop-md-12 col-lg-12 col-xl-12">
+                <div class="chapter-box-wrap">
+                    <div class="row">
+                        <div class="col-sm-6 cop-md-4 col-lg-4 col-xl-4" ng-repeat="demo in availableDemoList">
+                            <div class="chapter-box">
+                                <div class="title-block">
+                                    <h3>{{demo.name}}</h3>
+                                    <button>
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.26208 0.508316L10.928 5.52235H16.2287C16.9859 5.52235 17.2888 6.49522 16.683 6.94424L12.3668 10.0125L14.0327 15.0266C14.2599 15.7001 13.4269 16.2988 12.8211 15.8498L8.50484 12.7815L4.18858 15.8498C3.58279 16.2988 2.74982 15.7001 2.97699 15.0266L4.64292 10.0125L0.326659 6.94424C-0.279132 6.49522 0.0237633 5.52235 0.781002 5.52235H6.1574L7.7476 0.508316C7.97477 -0.172694 9.03491 -0.172694 9.26208 0.508316Z"
+                                                fill="#F49A66" />
+                                        </svg>
+                                        {{demo.status}} Demo
+                                    </button>
+                                </div>
+                                <p>
+                                    {{demo.description}}
+                                </p>
+                                <h5 class="mr-t10 mr-b10">{{demo.islands}} islands - {{demo.Concepts}} Concepts</h5>
+                                <a ng-href="#!/chapter-details/{{demo.id}}" class="play-btn mr-t20">
+                                    <svg class="mr-r10" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11 5.26795C12.3333 6.03775 12.3333 7.96225 11 8.73205L3.5 13.0622C2.16666 13.832 0.499999 12.8697 0.499999 11.3301L0.5 2.66987C0.5 1.13027 2.16667 0.168021 3.5 0.937822L11 5.26795Z"
+                                            fill="white" />
+                                    </svg>
+                                    Play
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
